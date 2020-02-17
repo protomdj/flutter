@@ -32,7 +32,8 @@ class MyApp extends StatelessWidget {
         ),
       ),
       home: LoginScreen(),
-      //hello test
+      
+      home: LoginScreen()
     );
   }
 }

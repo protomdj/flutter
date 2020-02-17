@@ -1,9 +1,15 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'login_screen.dart';
 
 import 'package:http/http.dart' as http;
 import 'dart:async';
 import 'dart:convert';
+
+import 'dart:io';
+import 'dart:convert';
+
 
 void main() => runApp(MyApp());
 
@@ -29,6 +35,15 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage>{
 
 Future<List<User>> _getUsers() async {
+
+//json read
+  new File('json/config.json')
+    .readAsString()
+    .then((fileContents) => json.decode(fileContents))
+    .then((jsonData) {
+        // do whatever you want with the data
+    });
+
   var data = await http.get("http://www.json-generator.com/api/json/get/ckQkmZXIwO?indent=2");
   var jsonData = json.decode(data.body);
   List<User> users = [];

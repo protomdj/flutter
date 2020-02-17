@@ -13,27 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Login Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
-        accentColor: Colors.orange,
-        cursorColor: Colors.orange,
-        textTheme: TextTheme(
-          display2: TextStyle(
-            fontFamily: 'OpenSans',
-            fontSize: 45.0,
-            color: Colors.orange,
-          ),
-          button: TextStyle(
-            fontFamily: 'OpenSans',
-          ),
-          subhead: TextStyle(fontFamily: 'NotoSans'),
-          body1: TextStyle(fontFamily: 'NotoSans'),
-        ),
-      ),
-      home: LoginScreen(),
-      
-      home: LoginScreen()
+      home: MyHomePage()
     );
   }
 }
@@ -54,7 +34,7 @@ Future<List<User>> _getUsers() async {
   List<User> users = [];
 
   for(var u in jsonData){
-    User user = User(u["index"],u["about"],u["name"],u["email"],u["picture"]);
+    User user = User(u["index"],u["about"],u["name"],u["email"],u["phone"],u["address"],u["longitude"],u["latitude"]);
     user.add(user);
       }
       return users;
@@ -110,7 +90,7 @@ Future<List<User>> _getUsers() async {
       }
     }
 
-    class DetailPage extends StatelessWidget{
+  class DetailPage extends StatelessWidget{
       final User user;
 
       DetailPage(this.user);
@@ -132,9 +112,11 @@ Future<List<User>> _getUsers() async {
       final String about;
       final String name;
       final String email;
-      final String picture;
-    
-      User(this.index,this.about,this.name,this.email,this.picture);
+      final String phone;
+      final String address;
+      final String longitude;
+      final String latitude;
+      User(this.index,this.about,this.name,this.email,this.phone,this.address,this.longitude,this.latitude);
     
       void add(User user) {}
 }

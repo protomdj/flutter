@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
 
-class LoginScreen extends StatelessWidget {
+class LoginTest extends StatelessWidget {
   final Color backgroundColor1 = Color(0xFF444152);
   final Color backgroundColor2 = Color(0xFF6f6c7d);
-  final Color highlightColor = Color(0xfff65aa3);
+  final Color highlightColor = Color(0xff008080);
   final Color foregroundColor= Colors.white;
-  final AssetImage logo = new AssetImage("asset/logo.jpg");
+  final AssetImage logo = new AssetImage("C:/Users/oi124449/Downloads/logo.jpg");
 
   @override
   Widget build(BuildContext context) {
 
-
-
-
-    return Container(
+    return Scaffold(
+      resizeToAvoidBottomPadding: false ,
+      body: Container(
       decoration: new BoxDecoration(
         gradient: new LinearGradient(
           begin: Alignment.centerLeft,
@@ -35,16 +34,19 @@ class LoginScreen extends StatelessWidget {
                     height: 128.0,
                     width: 128.0,
                     child: new CircleAvatar(
-                      backgroundColor: Colors.transparent,
-                      foregroundColor: this.foregroundColor,
-                      radius: 100.0,
-                      child: new Text(
-                        "S",
-                        style: TextStyle(
-                          fontSize: 50.0,
-                          fontWeight: FontWeight.w100,
-                        ),
-                      ),
+                      // backgroundColor: Colors.transparent,
+                      // foregroundColor: this.foregroundColor,
+                      //  radius: 35.0,
+                      // child: new Text(
+                      //   "A",
+                      //   style: TextStyle(
+                      //     fontSize: 50.0,
+                      //     fontWeight: FontWeight.w100,
+                      //   ),
+                      // ),                     
+                      radius: 100.0,   
+                      backgroundImage: AssetImage('assets/images/logo.png'), 
+                                 
                     ),
                     decoration: BoxDecoration(
                         border: Border.all(
@@ -52,14 +54,13 @@ class LoginScreen extends StatelessWidget {
                           width: 1.0,
                         ),
                         shape: BoxShape.circle,
-                        //image: DecorationImage(image: this.logo)
                       ),
                   ),
                   new Padding(
                     padding: const EdgeInsets.all(16.0),
                     child: new Text(
-                      "Samarth Agarwal",
-                      style: TextStyle(color: this.foregroundColor),
+                      "BBites TV",
+                      style: TextStyle(color: Colors.yellow[100],fontSize: 18),
                     ),
                   )
                 ],
@@ -96,8 +97,9 @@ class LoginScreen extends StatelessWidget {
                     textAlign: TextAlign.center,
                     decoration: InputDecoration(
                       border: InputBorder.none,
-                      hintText: 'samarthagarwal@live.com',
-                      hintStyle: TextStyle(color: this.foregroundColor),
+                      hintText: 'example@email.com',
+                      hintStyle: TextStyle(color: this.foregroundColor,fontSize: 13),
+                      
                     ),
                   ),
                 ),
@@ -150,14 +152,16 @@ class LoginScreen extends StatelessWidget {
             child: new Row(
               children: <Widget>[
                 new Expanded(
-                  child: new FlatButton(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 20.0, horizontal: 20.0),
+                  child: new FlatButton(   
+                    shape: new RoundedRectangleBorder(
+                  borderRadius: new BorderRadius.circular(30.0)),                 
+                    padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 20.0),
                     color: this.highlightColor,
                     onPressed: () => {},
                     child: Text(
                       "Log In",
-                      style: TextStyle(color: this.foregroundColor),
+                      style: TextStyle(color: this.foregroundColor, fontSize: 18.0),
+                      
                     ),
                   ),
                 ),
@@ -212,6 +216,8 @@ class LoginScreen extends StatelessWidget {
           ),
         ],
       ),
+    )
     );
+
   }
 }

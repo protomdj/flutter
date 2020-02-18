@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:sampleproject/home.page.dart';
 import 'package:sampleproject/login_screen.dart';
+import 'package:sampleproject/login_test.dart';
 //import 'login_screen.dart';
 
 //import 'package:http/http.dart' as http;
@@ -20,9 +21,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: LoginScreen(),
+      title: 'Login',
+      debugShowCheckedModeBanner: false,
+      theme: new ThemeData(
 
-      debugShowCheckedModeBanner: false  
+        primarySwatch: Colors.grey,
+      ),
+
+        home: LoginTest(),
+
+      
     );
   }
 }

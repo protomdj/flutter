@@ -33,17 +33,7 @@ class LoginTest extends StatelessWidget {
                   Container(
                     height: 128.0,
                     width: 128.0,
-                    child: new CircleAvatar(
-                      // backgroundColor: Colors.transparent,
-                      // foregroundColor: this.foregroundColor,
-                      //  radius: 35.0,
-                      // child: new Text(
-                      //   "A",
-                      //   style: TextStyle(
-                      //     fontSize: 50.0,
-                      //     fontWeight: FontWeight.w100,
-                      //   ),
-                      // ),                     
+                    child: new CircleAvatar(                                    
                       radius: 100.0,   
                       backgroundImage: AssetImage('assets/images/logo.png'), 
                                  

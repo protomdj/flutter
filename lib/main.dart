@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:sampleproject/home.page.dart';
+import 'package:sampleproject/login1.dart';
 import 'package:sampleproject/login_screen.dart';
 import 'package:sampleproject/login_test.dart';
 //import 'login_screen.dart';
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.grey,
       ),
 
-        home: LoginTest(),
+        home: LoginScreen1(),
 
       
     );

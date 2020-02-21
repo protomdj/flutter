@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "554741717998",
+    "firebase_url": "https://bbites-17b2a.firebaseio.com",
+    "project_id": "bbites-17b2a",
+    "storage_bucket": "bbites-17b2a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:554741717998:android:2fa33b3d173379ac94ccff",
+        "android_client_info": {
+          "package_name": "com.example.sampleproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "554741717998-37oo3svq3cp2qij6a7bu87jmljvhdmit.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sampleproject",
+            "certificate_hash": "cd3182cc39236bc19cc18d2f624abcc7655ec2db"
+          }
+        },
+        {
+          "client_id": "554741717998-q70a5n78oot51uofu3cte7ld7f5grva4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6Nxdy_ZW3AZhngxmCVWxg7_b7FTRSjvI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "554741717998-q70a5n78oot51uofu3cte7ld7f5grva4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:sampleproject/register.dart';
-import 'package:google_sign_in/google_sign_in.dart';
+//import 'package:google_sign_in/google_sign_in.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class LoginScreen1 extends StatefulWidget {
@@ -315,16 +315,13 @@ class _LoginScreen1State extends State<LoginScreen1>
   //   accessToken: googleAuth.accessToken,
   //   idToken: googleAuth.idToken,
   // );
-try{
+
   final FirebaseUser user = (await _auth.signInWithEmailAndPassword(
     email: username,password: password)).user;
   //print("signed in " + user.displayName);
   print("signed in " + user.uid);
   return user;
-}
-catch(e){
-  
-};
+
 }
 
 

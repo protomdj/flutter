@@ -28,8 +28,12 @@ class _LoginScreen1State extends State<LoginScreen1>
   //@override
   Widget build(BuildContext context) {
     return new Scaffold(
+       
         resizeToAvoidBottomPadding: false,
+        
         body: Container(
+          padding: new EdgeInsets.all(30.0),
+                  
           height: MediaQuery.of(context).size.height,
           decoration: BoxDecoration(
             //color: this.backgroundColor,
@@ -40,6 +44,7 @@ class _LoginScreen1State extends State<LoginScreen1>
                   Colors.black.withOpacity(0.2), BlendMode.dstATop),
             ),
           ),
+          child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.max,
@@ -304,7 +309,9 @@ class _LoginScreen1State extends State<LoginScreen1>
               ),
             ],
           ),
-        ));
+        )
+        )
+        );
   }
 
   Future<FirebaseUser> _handleSignIn() async {
